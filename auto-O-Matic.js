@@ -12,3 +12,13 @@ var rand3 = Math.floor(Math.random() * years.length);
 var rand4 = Math.floor(Math.random() * colors.length);
 var rand5 = Math.floor(Math.random() * 5) + 1;
 var rand6 = Math.floor(Math.random() * 2);
+
+var car = {
+	make: makes[rand1],
+	model: models[rand2],
+	year: years[rand3],
+	color: colors[rand4],
+	passengers: rand5,
+	convertible: convertible[rand6],
+	mileage: 0
+};
