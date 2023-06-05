@@ -23,13 +23,13 @@ function makeCar() {
 		mileage: 88000,
 		started: false, // ERROR: started is not defined?
 		start: function () {
-			started = true;
+			this.started = true;
 		},
 		stop: function () {
-			started = false;
+			this.started = false;
 		},
 		drive: function () {
-			if (started) {
+			if (this.started) {
 				alert("Zoom Zoom!");
 			} else {
 				alert("You need to start the engine first.");
@@ -65,6 +65,7 @@ function passengers(car) {
 
 // function to display car model
 function displayCar(car) {
+	car.drive();
 	console.log("Your new car is a " + car.year + " " + car.make + " " + car.model + " " + convertible(car) + " " + passengers(car) + ".");
 }
 
