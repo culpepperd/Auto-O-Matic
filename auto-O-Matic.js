@@ -20,8 +20,22 @@ function makeCar() {
 		color: colors[rand4],
 		passengers: rand5,
 		convertible: convertible[rand6],
-		mileage: 0
-	};
+		mileage: 88000,
+		started: false, // ERROR: started is not defined?
+		start: function () {
+			started = true;
+		},
+		stop: function () {
+			started = false;
+		},
+		drive: function () {
+			if (started) {
+				alert("Zoom Zoom!");
+			} else {
+				alert("You need to start the engine first.");
+			}
+		}
+	}
 	return car;
 }
 
