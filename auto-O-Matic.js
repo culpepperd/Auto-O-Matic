@@ -25,9 +25,33 @@ function makeCar() {
 	return car;
 }
 
+// function determines output if car is convertible
+function convertible(car) {
+	var convert = "convertible";
+	var hardTop = "hard top";
+	if (car.convertible) {
+		convertDecision = convert;
+	} else {
+		convertDecision = hardTop;
+	}
+	return convertDecision;
+}
+
+// function determines output for number of passengers
+function passengers(car) {
+	var sedan = "sedan";
+	var coupe = "coupe";
+	if (car.passengers > 2) {
+		passDecision = sedan;
+	} else {
+		passDecision = coupe;
+	}
+	return passDecision;
+}
+
 // function to display car model
 function displayCar(car) {
-	console.log("Your new car is a " + car.year + " " + car.make + " " + car.model);
+	console.log("Your new car is a " + car.year + " " + car.make + " " + car.model + " " + convertible(car) + " " + passengers(car) + ".");
 }
 
 // create car
