@@ -1,4 +1,5 @@
 function makeCar() {
+	// makeCar() function defines property arrays for the car object
 	var makes = ["Chevy", "GM", "Fiat", "Webville Motors", "Tucker"];
 	var models = ["Cadillac", "500", "Bel-Air", "Taxi", "Torpedo"];
 	var years = [1955, 1957, 1948, 1954, 1961];
@@ -24,9 +25,12 @@ function makeCar() {
 	return car;
 }
 
+// function to display car model
 function displayCar(car) {
 	console.log("Your new car is a " + car.year + " " + car.make + " " + car.model);
 }
 
+// create car
 var carToSell = makeCar();
-displayCar(carToSell;)
+// display car model
+displayCar(carToSell);
