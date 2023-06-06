@@ -23,10 +23,10 @@ function makeCar() {
 		mileage: 88000,
 		started: false, // ERROR: started is not defined?
 		start: function () {
-			this.started = true;
+			this.started = true; // "this" tells the method where to find the started variable/property
 		},
 		stop: function () {
-			this.started = false;
+			this.started = false; // the started variable in in "this" object
 		},
 		drive: function () {
 			if (this.started) {
